@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 Django settings for siteDjango1 project.
 
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,9 +77,17 @@ WSGI_APPLICATION = 'siteDjango1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_db',
+        'USER': 'root',
+        'PASSWORD': '&éà(_à',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
+#    'default': {
+#       'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
 }
 
 
